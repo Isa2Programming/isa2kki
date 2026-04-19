@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Averia+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+        
+
+    <meta charset="UTF-8">
+    <title>Isa</title>
+    <style>
+    body {  
+        margin: 15;
+        background-image: url("YumeBG3.png");
+        background-position: center;
+        height: 150vh;
+        color: white;
+        text-align: center;
+        font-family: 'Lexend', sans-serif;
+    }
+
+    .bg-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+
+        background: rgba(0,0,0,0.3);
+        z-index: -1;
+    }
+
+    @font-face {
+        font-family: Yume2kki;
+        src: url('yummy nickels.ttf');
+    }
+
+    /* Top title */
+    #header-img {
+        margin-bottom: 0px;
+        height: 200px;
+        object-fit: cover;
+    }
+
+    #title {
+        font-family: Yume2kki;
+        margin-top: 0px;
+        font-size: 2em;   
+    }
+
+    /* Main box */
+    .container {
+        width: 60%;
+        height: 100vh;
+        margin: 20px auto;
+        display: flex;
+        background: #302749;
+        overflow: hidden;
+    }
+
+    /* Left tabs */
+    .tabs {
+        width: 225px;
+        background-image: url(YumeBG3.png);
+        display: flex;
+        flex-direction: column;
+        border: 20px solid transparent;
+        border-image: url("2kkiborder.png") 35 stretch;
+    }
+
+    .tabs button {
+        font-family: Yume2kki;
+        font-size: 15pt;
+        padding: 15px;
+        margin-top: 10px;
+        border: none;
+        background: none;
+        color: white;
+        cursor: pointer;
+        text-align: center;
+        /*flex: 1; */
+        transition: 0.15s;
+    }
+
+    .tabs button:hover {
+        outline: 5px solid white;
+        outline-offset: 3px;
+        box-shadow: 0 0 8px white;
+    }
+
+    /* Right content */
+    .content {
+        flex: 1;
+        padding: 20px;
+        overflow-y: auto; /* THIS makes it scroll */
+        text-align: left;
+        border: 20px solid transparent;
+        border-image: url("2kkiborder.png") 35 stretch;
+    }
+
+    .tabs button.active {
+        outline: 2px solid white;
+    }
+
+    h2 {
+        background: black;
+        color: white;
+        box-shadow: 0 0 0 4px #888;
+        margin-bottom: 100px;
+
+        border: 6px solid #cfcfcf; /* outer border */
+        padding: 30px;
+
+        text-align: center;
+        font-size: 25px;
+        font-family: lexend;
+    }
+
+    p {
+        background: black;
+        color: white;
+        box-shadow: 0 0 0 4px #888;
+        margin-bottom: 50px;
+
+        border: 6px solid #cfcfcf; /* outer border */
+        padding: 20px;
+
+        text-align: center;
+        font-size: 20px;
+        font-family: lexend;
+    }
+
+    a {
+        display: inline;
+        color: #8c00ff;
+        text-decoration: none;
+        font-size: 20px;
+
+    }
+
+    .img-link {
+        transition: 0.2s;
+        cursor: pointer;
+        width: 150px;
+    }
+    .img-link:hover {
+        transform: scale(1.1);
+        opacity: 1;  
+    }
+
+    </style>
+</head>
+
+<div class="img-link"></div>
+
+<div class="bg-overlay"></div>
+
+<img id="header-img" src="Yumehop.png">
+
+<h1 id="title">Welcome!</h1>
+
+<div class="container">
+
+    <div class="tabs">
+        <button onclick="showTab('about me', 'Welcome!', 'Yumehop.png')">About me</button>
+        <button onclick="showTab('projects', 'Projects', 'Yumetired.png')">Projects</button>
+        <button onclick="showTab('journal', 'Journal', 'UroMusic.png')">Journal</button>
+        <button onclick="showTab('fav media', 'Fav Media', 'UroWhat!.png')">Fav Media</button>
+        <button onclick="showTab('inspirations', 'Inspirations', 'Urohat.png')">Inspirations</button>
+        <button onclick="showTab('socials', 'Socials', 'UroCat.png')">Socials</button>
+    </div>
+
+    <div class="content">
+        <div id="about me" class="tab-content">
+            <h2>This is my website! I've never built a site before using HTML so pardon any bugs or ill formatting</h2>
+        </div>
+
+        <div id="projects" class="tab-content" style="display:none;">
+            <h2>Stuff I am currently working on, or plan to work on</h2>
+        </div>
+
+        <div id="journal" class="tab-content" style="display:none;">
+            <h2>General life stuff occasionally here</h2>
+        </div>
+
+        <div id="fav media" class="tab-content" style="display:none;">
+            <h2>Some of my favorite pieces of media in shows/movies/games/other</h2>
+        </div>        
+
+        <div id="inspirations" class="tab-content" style="display:none;">
+            <h2>A few people who inspired me and the work they've done</h2>
+            <p>Tem or Temmie Chang: I first knew of her for her work on Undertale, but I kept up with a lot of her personal work and projects
+                <br><br>
+                I keep up with her RPGMaker game side-projects, and if I were to ever make one for fun she would be a primary inspiration
+                <br><br>
+                Her personal <a href="https://temstuff.neocities.org/">website</a> inspired the format for this site pretty heavily 
+                <br><br>
+            </p>
+            <p>James Foster: Foster is probably my favorite NFL draft analyst/evaluator. 
+                I used a lot of his resources (primarily his <a href="https://jfosterdraft.com/">draft site</a>) 
+                in this most recent draft cycle, and it really makes the draft process so much easier to consume
+                <br><br>
+                It kinda showed me just how much a simple website that is formatted well and has the *right* info 
+                can be such a gamechanger, and as this is the kinda work I want to build a career in, his stuff is a big inspiration for me
+            </p>
+        </div>        
+
+        <div id="socials" class="tab-content" style="display:none;">
+            <h2>Some places you can find me</h2>
+            <a href="https://x.com/Agent0vershown" target="_blank">
+                <img src="X.png" alt="My sports centered twt account" class="img-link">
+            </a>
+            <a href="https://www.instagram.com/itsstillisa/" target="_blank">
+                <img src="Instagram.png" alt="My Instagram!" class="img-link">
+            </a>
+            <a href="https://open.spotify.com/user/31s3nsdfqzjxz4xtxv5palxtau44?si=049306eddbe347f2" target="_blank">
+                <img src="Spotify.png" alt="My spotify!" class="img-link">
+            </a>
+            <a href="https://discord.gg/qVpsY337" target="_blank">
+                <img src="Discord.png" alt="Add me on discord!" class="img-link">
+            </a>
+
+        </div>
+      
+    </div>
+<script>
+function showTab(tabId, titleText, imgSrc) {
+    let tabs = document.getElementsByClassName("tab-content");
+
+    for (let i = 0; i < tabs.length; i++) {
+        tabs[i].style.display = "none";
+    }
+
+    document.getElementById(tabId).style.display = "block";
+
+    document.getElementById("title").innerText = titleText;
+    document.getElementById("header-img").src = imgSrc;
+}
+</script>
+
+<script>
+function showTab(tabId, titleText, imgSrc) {
+    let tabs = document.getElementsByClassName("tab-content");
+    let buttons = document.querySelectorAll(".tabs button");
+
+    for (let i = 0; i < tabs.length; i++) {
+        tabs[i].style.display = "none";
+    }
+
+    buttons.forEach(btn => btn.classList.remove("active"));
+
+    document.getElementById(tabId).style.display = "block";
+
+    event.target.classList.add("active");
+
+    document.getElementById("title").innerText = titleText;
+    document.getElementById("header-img").src = imgSrc;
+}
+</script>
+</div>
