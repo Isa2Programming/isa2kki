@@ -21,7 +21,6 @@
         text-align: center;
         font-family: 'Lexend', sans-serif;
     }
-
     .bg-overlay {
         position: fixed;
         top: 0;
@@ -177,13 +176,13 @@
         display: flex;
         justify-content: space-evenly;
         align-items: center;
-        overflow: auto;
     }
 
     .img-link {
+        width: 120px;
+        height: auto;
         transition: 0.2s;
         cursor: pointer;
-        width: 80%;
     }
     .img-link:hover {
         transform: scale(1.1);
@@ -271,7 +270,14 @@
         }
         img {
             max-width: 150px;
+
             height: auto;
+        }
+        .img-link {
+            width: 40px;
+            height: auto;
+            transition: 0.2s;
+            cursor: pointer;
         }
     }
     
